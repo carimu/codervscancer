@@ -5,15 +5,12 @@
 		$db->pick_db("codersvscancer");
         if ($stmt = $db->prepare("SELECT ContactEmail FROM tbl_contacts WHERE UserEmail = ?"))
         {
-            $stmt->bind_param('s',$UserEmail);
+			$stmt->bind_param('s',$UserEmail);
             $stmt->execute();
             $stmt->bind_result($row);
 			$contacts = array();
 			while ($stmt->fetch()) {
-				foreach( $row as $value )
-				{
-					array_push($contacts, $value);
-				} 
+				array_push($contacts, $row);
 			}
         }
         $db->disconnect();
@@ -26,7 +23,7 @@
 		//First is the user, then all contacts
 		$result[$UserEmail] = getLastExamDateForSingleUser($UserEmail);
 		
-		$contacts = $getContacts();
+		$contacts = $getContacts($UserEmail);
 		foreach ($contacts as $contact)
 		{
 			$result[$contact] = getLastExamDateForSingleUser($contact);
@@ -43,7 +40,7 @@
             $stmt->bind_param('s',$UserEmail);
             $stmt->execute();
             $stmt->bind_result($result);
-			$stmt->fetch()
+			$stmt->fetch();
         }
         $db->disconnect();
         return isset($result) ? $result : null;

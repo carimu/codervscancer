@@ -54,5 +54,26 @@ $(document).ready(function () {
 			window.location.href = "login.php";
 		 });
 	});
+	
+	$("#addContactSubmit").click( function() {
+		var request = $.ajax({
+		   method: "POST",
+		   url: "addContact.php",
+		   data: $("#addContactForm").serialize()
+		 });
+
+		 request.done( function(msg) {
+			 if (msg == true)
+			 {
+				 $("#contactsList").append("<p>" + $("#email").val() + "</p>");
+				 $("#email").val("");
+			 }
+			 else
+			 {
+				alert(msg);	
+			 }
+		 });
+		 return false;
+	});
 
 });

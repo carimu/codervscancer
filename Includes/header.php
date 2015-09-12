@@ -28,7 +28,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="headerNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="">Fake Button</a></li>
+					<li><a href="contacts.php">Loved Ones</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php
