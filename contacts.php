@@ -17,4 +17,8 @@ Add new button, click and email entry form appears with submit button -->
 </script>
 
 
+<button type="button" id="addContact" class="btn btn-default">Add Contact</button>
+
+
+
 <?php include("Includes/footer.php"); ?>

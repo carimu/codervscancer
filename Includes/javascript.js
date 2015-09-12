@@ -16,7 +16,7 @@ $(document).ready(function () {
 			 }
 			 else
 			 {
-				//alert(msg);	
+				alert(msg);	
 				//alert("That username is taken. Please try a new one.");
 				$("#createAccountErrorMsg").text("That username is taken. Please try a new one.");
 			 }

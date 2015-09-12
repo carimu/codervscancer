@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<h1> Ribbon of Friends </h1>
-	<?php session_start(); if (isset($_SESSION["username"])){ echo "<p class=\"text-center\">Logged in as: " . $_SESSION["username"] . "</p>";} ?>
+	<?php session_start(); if (isset($_SESSION["UserEmail"])){ echo "<p class=\"text-center\">Logged in as: " . $_SESSION["UserEmail"] . "</p>";} ?>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -32,7 +32,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php
-						if (isset($_SESSION["username"]))
+						if (isset($_SESSION["UserEmail"]))
 						{
 							echo "<li><a id=\"logoutButton\" href=\"\"><span class=\"glyphicon glyphicon-log-in\"></span> Logout</a></li>";
 						}

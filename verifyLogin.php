@@ -1,17 +1,14 @@
 <?php
 	include "Includes/databaseClassMySQLi.php";
 	
-	if(isset($_POST["username"]) && isset($_POST["password"]))
+	if(isset($_POST["email"]) && isset($_POST["password"]))
 	{
 		$db = new database();
-		$db->pick_db("workoutlog");
-		
-		$query = "SELECT Password FROM tbl_workoutlog_users WHERE UserName = '" . $_POST["username"] . "'";
-		$res = $db->send_sql($query);
-		
-        $stmt = $db->prepare("SELECT Password FROM tbl_workoutlog_users WHERE UserName = ?");
+		$db->pick_db("codersvscancer");
+
+        $stmt = $db->prepare("SELECT Password FROM tbl_users WHERE UserEmail = ?");
         
-        $stmt->bind_param('s',$_POST["username"]);
+        $stmt->bind_param('s',$_POST["email"]);
         $stmt->execute();
         $stmt->bind_result($passHash);
         $stmt->fetch();
@@ -20,7 +17,7 @@
 		{
 			//User/Pass combo valid
 			session_start();
-			$_SESSION["username"]=$_POST["username"];
+			$_SESSION["UserEmail"]=$_POST["email"];
 			$result = true;
 		}
 		

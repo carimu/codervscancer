@@ -7,9 +7,9 @@
 <form role="form" id="loginForm" class="form-horizontal">
 	<div class="center-block text-center">
 		<div class="form-group">
-			<label class="control-label col-sm-1 col-sm-offset-4" for="username">Username: </label>
+			<label class="control-label col-sm-1 col-sm-offset-4" for="email">Email: </label>
 			<div class="col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-				<input type="text" class="form-control" name="username" placeholder="Enter your username" required>
+				<input type="email" class="form-control" name="email" placeholder="Enter your Email Address" required>
 			</div>
 		</div>
 		<div class="form-group">

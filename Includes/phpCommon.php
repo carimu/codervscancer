@@ -3,7 +3,7 @@
     {
 		$db = new database();
 		$db->pick_db("codersvscancer");
-        if ($stmt = $db->prepare("SELECT ContactEmail FROM tbl_contact WHERE UserEmail = ?"))//TO DO, return a list of contact emails
+        if ($stmt = $db->prepare("SELECT ContactEmail FROM tbl_contacts WHERE UserEmail = ?"))
         {
             $stmt->bind_param('s',$UserEmail);
             $stmt->execute();
@@ -38,7 +38,7 @@
 	{
 		$db = new database();
 		$db->pick_db("codersvscancer");
-        if ($stmt = $db->prepare("SELECT CompletedDate FROM tbl_exam WHERE UserEmail = ? ORDER BY CompletedDate DESC LIMIT 1"))//TO DO
+        if ($stmt = $db->prepare("SELECT LastExamCompleted FROM tbl_users WHERE UserEmail = ?"))
         {
             $stmt->bind_param('s',$UserEmail);
             $stmt->execute();
