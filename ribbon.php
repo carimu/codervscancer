@@ -1,18 +1,13 @@
-<?php
-	include("Includes/header.php");
-?>
-
-
-
-<?php include("Includes/footer.php"); ?>
 
 <script> 
-	var jsonResponse = <?php getLastExamDateForAllContacts($_SESSION["UserEmail"]); ?>;
-	alert(jsonResponse);
-	var parsed = JSON.parse(jsonResponse);
-	var lastExamAllContacts = [];
-	for(var x in parsed){
-	  lastExamAllContacts.push(parsed[x]);
-	}
-	alert(lastExamAllContacts);
+	$(document).ready(function () { 
+		var jsonResponse = <?php echo getLastExamDateForAllContacts($_SESSION["UserEmail"]); ?>;
+		
+		for (var key in jsonResponse) {
+		  if (jsonResponse.hasOwnProperty(key)) {
+			alert(key + " -> " + jsonResponse[key]);
+		  }
+		}
+
+	});
 </script>

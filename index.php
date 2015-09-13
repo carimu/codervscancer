@@ -5,11 +5,11 @@
 <?php
     if (!isset($_SESSION["UserEmail"]))
     { 
-        echo include("homepage.html");
+        include("homepage.html");
     }  
 	else
 	{
-		echo include("ribbon.php");
+		include("ribbon.php");
 	}
 ?>
 
