@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="Includes/style.css">
 </HEAD>
 <BODY>
-	<h1> Ribbon of Friends </h1>
+	<h1> Ribbon of Love </h1>
 	<?php session_start(); if (isset($_SESSION["UserEmail"])){ echo "<p class=\"text-center\">Logged in as: " . $_SESSION["UserEmail"] . "</p>";} ?>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -28,7 +28,15 @@
 			</div>
 			<div class="collapse navbar-collapse" id="headerNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="contacts.php">Loved Ones</a></li>
+				<?php
+					if (isset($_SESSION["UserEmail"]))
+							{
+								echo "<li><a href='profile.php'>My Profile</a></li>";
+								echo "<li><a href='contacts.php'>Loved Ones</a></li>";
+								echo "<li><a href='learn.php'>Learn</a></li>";
+							}
+					
+				?>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php

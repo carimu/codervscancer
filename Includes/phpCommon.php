@@ -23,7 +23,7 @@
 		//First is the user, then all contacts
 		$result[$UserEmail] = getLastExamDateForSingleUser($UserEmail);
 		
-		$contacts = $getContacts($UserEmail);
+		$contacts = json_decode($getContacts($UserEmail));
 		foreach ($contacts as $contact)
 		{
 			$result[$contact] = getLastExamDateForSingleUser($contact);
@@ -33,8 +33,9 @@
 	
 	function getLastExamDateForSingleUser($UserEmail)
 	{
-		$db = new database();
-		$db->pick_db("codersvscancer");
+		//$db = new database();
+		//$db->pick_db("codersvscancer");
+		
         if ($stmt = $db->prepare("SELECT LastExamCompleted FROM tbl_users WHERE UserEmail = ?"))
         {
             $stmt->bind_param('s',$UserEmail);
