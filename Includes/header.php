@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<h1> Ribbon of Love </h1>
-	<?php session_start(); if (isset($_SESSION["UserEmail"])){ echo "<p class=\"text-center\">Logged in as: " . $_SESSION["UserEmail"] . "</p>";} ?>
+<!--	<?php session_start(); if (isset($_SESSION["UserEmail"])){ echo "<p class=\"text-center\">Logged in as: " . $_SESSION["UserEmail"] . "</p>";} ?> -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">

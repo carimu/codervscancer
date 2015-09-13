@@ -22,6 +22,7 @@
 	</div>		
 </form>
 <p id="loginErrorMsg"></p>
-<button onclick="window.location.href='signUp.php'" class="btn btn-default center-block">Create new account</button> 
+<h1 class="font-family:'Arvo',serif;">Last self exam performed:</h1><br><h1 style="color:#FF6666" class="font-family:'Arvo',serif;">August 1st, 2015</h1><br><br><h1 class="color:#FF6666;font-family:'Arvo',serif;">It's been more than 30 days since your last check!</h1>
+<button onclick="window.location.href='signUp.php'" class="btn btn-default center-block">Add a new loved one</button> 
 
 <?php include("Includes/footer.php"); ?>
