@@ -31,6 +31,20 @@ p {
   font-family: 'Lato', sans-serif; 
 }
 
+.homepage {
+
+background-image: url("../images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  position:relative;
+  width:100%;
+  
+}
+
+
+
+
 
 .table caption {
     text-align: center;
@@ -53,7 +67,7 @@ p {
 color: #000;  /*Sets the text hover color on navbar*/
 }
 
-.navbar-default .navbar-brand .navbar-bran {
+.navbar-default .navbar-brand .navbar-brand {
 	color: White;
 }
 
@@ -66,8 +80,13 @@ background-color: White;
   .navbar-default {
     background-color: #F93E99;
     border-color: #F93E99;
+    margin-bottom: 0px;
 }
+.navbar .navbar-default
+{margin-bottom: 0px;
+  
 
+}
 
   .navbar-default .navbar-nav > li > a {
    color: White; /*Change active text color here*/
