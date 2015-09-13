@@ -1,5 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+
+html *
+{
+   font-family: 'Arvo', serif;   
+}
+
 body {
-	background-color: LightPink;
+	background-color: White;
 }
 
 h1 {
@@ -13,6 +20,7 @@ h2 {
 p {
 	text-align: center;
 }
+
 
 .table caption {
     text-align: center;
@@ -28,3 +36,29 @@ p {
     height: 4em;
     clear: both;
 }
+
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #000;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-brand .navbar-bran {
+	color: White;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: white; /*BACKGROUND color for active*/
+background-color: White;
+}
+
+  .navbar-default {
+    background-color: #F93E99;
+    border-color: #F93E99;
+}
+
+
+  .navbar-default .navbar-nav > li > a {
+   color: White; /*Change active text color here*/
+    }
