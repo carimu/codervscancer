@@ -36,16 +36,20 @@ p {
 background-image: url("../images/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  vertical-align: middle;
   position:relative;
   top: -22px;
-  width:100%; 
+  max-width:100%;
   
 }
 
 .homepageQuote {
 	color:#ffffff;
 	text-align:center;
+  padding-top: 120px;
+  padding-right: 50px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+  line-height: 120%;
 }
 
 
