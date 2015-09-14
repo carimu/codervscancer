@@ -2,10 +2,7 @@
 Coders vs. Cancer Hackathon http://codersvscancer.org
 
 Team:
-Jeffrey DeVince
-Caridad Zegarra
-Tiffany Lambert
-Olivia James
+Jeffrey DeVince, Caridad Zegarra, Tiffany Lambert, Olivia James
 
 ------------------------------------------------------
 
