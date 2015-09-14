@@ -33,7 +33,7 @@
 							{
 								echo "<li><a href='profile.php'>My Profile</a></li>";
 								echo "<li><a href='contacts.php'>Loved Ones</a></li>";
-								echo "<li><a href='learn.php'>Learn</a></li>";
+								echo "<li><a href='http://www.nationalbreastcancer.org/breast-self-exam'>Learn</a></li>";
 							}
 					
 				?>

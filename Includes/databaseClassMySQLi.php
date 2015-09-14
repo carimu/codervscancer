@@ -10,8 +10,8 @@
 	{
 		private $res;
 		private $host = "127.0.0.1"; // change to your own default values
-		private $user = "userjtd"; // change to your own default values
-		private $pass = "cs546pass"; // change to your own default values
+		private $user = ""; // change to your own default values
+		private $pass = ""; // change to your own default values
 		private $db;
 		private $mysqli;
 
